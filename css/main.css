@@ -1462,7 +1462,8 @@ h1.intro-header::before {
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: .2rem;
-  margin-bottom: 2.4rem;
+  /* margin-bottom: 2.4rem; */
+  margin-bottom: 9rem;
 }
 
 .home-content-left h1 {
@@ -1471,7 +1472,7 @@ h1.intro-header::before {
   letter-spacing: -.05rem;
   line-height: 1.269;
   color: #ffffff;
-  margin-bottom: 9rem;
+  /* margin-bottom: 9rem; */
 }
 
 .home-content-left .button.stroke {

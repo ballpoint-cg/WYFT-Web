@@ -102,10 +102,10 @@ body[data-aos-duration='300'] [data-aos] {
 body[data-aos-delay='300'] [data-aos] {
   transition-delay: 0;
 }
-
+/* this is teh one*/
 [data-aos][data-aos][data-aos-delay='300'].aos-animate,
 body[data-aos-delay='300'] [data-aos].aos-animate {
-  transition-delay: .3s;
+  transition-delay: .17s;
 }
 
 [data-aos][data-aos][data-aos-duration='350'],
