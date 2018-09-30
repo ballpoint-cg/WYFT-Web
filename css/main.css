@@ -1133,7 +1133,7 @@ h1.intro-header::before {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: 501;
-  border-bottom: 2px solid rgb(94, 189, 230);
+  border-bottom: 1px inset rgb(94, 189, 230);
 }
 
 
@@ -1827,60 +1827,27 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   }
 }
 
-
-
 /* ===================================================================
- *  11. about - (_layout.scss)
+ *  10.5. about-how - (_layout.scss)
  *
  * ------------------------------------------------------------------- */
-
-#about {
-  min-height: 786px;
-  background: #ffffff;
-  padding-top: 18rem;
-  overflow: hidden;
-}
-
-.about-intro {
-  padding-bottom: 3.6rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-}
-
-.about-features .features-list {
-  padding-top: 5.4rem;
-}
-
-.about-features .feature {
-  margin-bottom: 1.8rem;
-}
-
-.about-features .feature .icon {
-  margin-bottom: 1.5rem;
-  display: inline-block;
-}
-
-.about-features .feature .icon i {
-  color: #39b54a;
-  font-size: 4.8rem;
-}
-
-.about-features .feature h3 {
-  font-family: "montserrat-regular", sans-serif;
-  font-size: 1.9rem;
-  color: #151515;
-  margin-bottom: 3rem;
-}
-
-.about-how {
-  padding-top: 7.2rem;
+ #about-how {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/adult-architecture-art.jpg") no-repeat center;
+  background-size: cover;
+  padding-top: 7rem;
   padding-bottom: 6rem;
+  color: white
 }
 
-.about-how h1.intro-header {
+#about-how h3{
+  color: white
+}
+#about-how h1.intro-header {
   text-align: center;
+  color: white
 }
 
-#about .about-how h1.intro-header::before {
+#about-how .about-how h1.intro-header::before {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -1949,6 +1916,50 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   top: -12px;
   left: -27px;
 }
+/* ===================================================================
+ *  11. about - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+#about {
+  min-height: 786px;
+  background: #ffffff;
+  padding-top: 18rem;
+  overflow: hidden;
+  padding-bottom: 7rem;
+}
+
+.about-intro {
+  padding-bottom: 3.6rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.about-features .features-list {
+  padding-top: 5.4rem;
+}
+
+.about-features .feature {
+  margin-bottom: 1.8rem;
+}
+
+.about-features .feature .icon {
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.about-features .feature .icon i {
+  color: #39b54a;
+  font-size: 4.8rem;
+}
+
+.about-features .feature h3 {
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 1.9rem;
+  color: #151515;
+  margin-bottom: 3rem;
+}
+
+
 
 .about-bottom-image img {
   vertical-align: bottom;
@@ -2015,7 +2026,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   .about-features .feature h3 {
     font-size: 1.8rem;
   }
-  .about-how h3 {
+  #about-how h3 {
     font-size: 1.9rem;
   }
   .about-how-content::before {
@@ -2479,7 +2490,9 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
  * ------------------------------------------------------------------- */
 
 #download {
-  background: #39b54a;
+  background: url("../images/adult-art-city.jpg") no-repeat center;
+  background-size: cover;
+  /* background: #39b54a; */
   color: #b2fabc;
   padding-top: 12rem;
   padding-bottom: 12rem;
