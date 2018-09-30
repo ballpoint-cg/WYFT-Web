@@ -795,8 +795,8 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  background: #309a3f;
-  border-color: #309a3f;
+  background: #0832A0;
+  border-color: #0832A0;
 }
 
 button.full-width,
@@ -825,8 +825,8 @@ button.stroke,
 
 button.stroke:hover,
 .button.stroke:hover {
-  border: 0.3rem solid #39b54a;
-  color: #39b54a;
+  border: 0.3rem solid #0832A0;
+  color: #0832A0;
 }
 
 button.pill,
@@ -1556,7 +1556,7 @@ h1.intro-header::before {
 .home-social-list li a:hover,
 .home-social-list li a:focus,
 .home-social-list li a:active {
-  color: #44c455;
+  color: #0832A0;
 }
 
 
@@ -1581,7 +1581,7 @@ h1.intro-header::before {
 
 .home-scrolldown a:hover,
 .home-scrolldown a:focus {
-  color: #44c455 !important;
+  color: #0832A0 !important;
 }
 
 html[data-useragent*='MSIE 10.0'] .home-scrolldown,
