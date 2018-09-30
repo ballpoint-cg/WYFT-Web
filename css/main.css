@@ -1847,7 +1847,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   color: white
 }
 
-#about-how .about-how h1.intro-header::before {
+#about-how h1.intro-header::before {
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
