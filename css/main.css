@@ -1124,7 +1124,7 @@ h1.intro-header::before {
  * ------------------------------------------------------------------- */
 
 #header {
-  width: 100%;
+  width: 101%;
   height: 72px;
   background-color: #ffffff;
   position: fixed;
