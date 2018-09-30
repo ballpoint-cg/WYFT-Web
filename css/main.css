@@ -780,8 +780,8 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  background-color: #39b54a;
-  border-color: #39b54a;
+  background-color: #D54AB7;
+  border-color: #D54AB7;
   color: #FFFFFF;
 }
 
@@ -2626,7 +2626,7 @@ footer ul a:visited {
 
 .footer-logo {
   display: block;
-  margin: 0 0 2.7rem 2rem;
+  margin: 0 0 2.7gitrem 2rem;
   padding: 0;
   outline: 0;
   border: none;
