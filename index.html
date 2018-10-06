@@ -48,12 +48,12 @@
 			<ul class="header-main-nav">
 				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                 <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
-				<!-- <li><a class="smoothscroll"  href="#pricing" title="pricing">Pricing</a></li> -->
-				<li><a class="smoothscroll"  href="#testimonials" title="sign-up">Sign-Up</a></li>
-				<li><a class="smoothscroll"  href="#download" title="download">Download</a></li>	
+				<li><a class="smoothscroll"  href="#about-how" title="about-how">How it Works</a></li>
+				<!-- <li><a class="smoothscroll"  href="#sign-up" title="sign-up">Sign-Up</a></li> -->
+				<!-- <li><a class="smoothscroll"  href="#download" title="download">Download</a></li>	 -->
 			</ul>
 
-            <a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>
+            <a href="#sign-up" title="sign-up" class="button button-primary cta smoothscroll">Sign Up</a>
 		</nav>
 
 		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
@@ -137,26 +137,6 @@
         </div>
 
     </section> <!-- end home -->  
-    <script>
-        var myIndex = 0;
-        carousel();
-        
-        function carousel() {
-            var images = ["images/camera-creative-creativity-flop.jpg","images/abandoned-antique-art.jpg"]
-            var i;
-            var x = document.getElementsByClassName("home-content");
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}    
-            x[myIndex-1].style.display = "table-cell";  
-            var section = document.getElementById("home");
-
-            section.style.backgroundImage = "url(\""+images[myIndex-1]+"\"";
-            setTimeout(carousel, 4000); // Change image every 2 seconds
-        }
-        </script>
 
     <!-- about
     ================================================== -->
@@ -279,7 +259,7 @@
 
     <!-- Testimonials Section
     ================================================== -->
-    <section id="testimonials">
+    <section id="sign-up">
 
         <div class="row">
             <div class="col-twelve">
