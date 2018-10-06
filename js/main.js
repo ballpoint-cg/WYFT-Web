@@ -82,9 +82,11 @@
 
 		$(".owl-carousel").owlCarousel({	
 	      loop: true,
-  			nav: false,
-			autoHeight: true,
-  			items: 1
+			  nav: false,
+			  dots: false,
+			  items: 1,
+			  autoplay:true
+
 		});
 
 	};  	
