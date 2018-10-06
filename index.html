@@ -49,7 +49,7 @@
 				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                 <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
 				<!-- <li><a class="smoothscroll"  href="#pricing" title="pricing">Pricing</a></li> -->
-				<li><a class="smoothscroll"  href="#testimonials" title="testimonials">Testimonials</a></li>
+				<li><a class="smoothscroll"  href="#testimonials" title="sign-up">Sign-Up</a></li>
 				<li><a class="smoothscroll"  href="#download" title="download">Download</a></li>	
 			</ul>
 
@@ -71,7 +71,7 @@
             <div class="row contents">                     
                 <div class="home-content-left">
 
-                    <h1 data-aos="fade-up">Where’d you find this?</h1>
+                    <h1 data-aos="fade-up">Where’d You Find This?</h1>
 
                     <h3 data-aos="fade-up">
                         Show the World!
@@ -80,25 +80,39 @@
                     <div class="buttons" data-aos="fade-up">
                         <a href="#download" class="smoothscroll button stroke">
                             <span class="icon-circle-down" aria-hidden="true"></span>
-                            Download App
-                        </a>
-                        <a href="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=39b54a" data-lity class="button stroke">
-                            <span class="icon-play" aria-hidden="true"></span>
-                            Watch Video
+                            Sign Up
                         </a>
                     </div>                                         
 
                 </div>
 
-                <!-- <div class="home-image-right">
-                    <img src="images/iphone-app-470.png" 
-                        srcset="images/iphone-app-470.png 1x, images/iphone-app-940.png 2x"  
-                        data-aos="fade-up">
-                </div> -->
             </div>
 
         </div> <!-- end home-content -->
 
+        <div class="home-content">        
+
+            <div class="row contents">                     
+                <div class="home-content-left">
+
+                    <h1 data-aos="fade-up">Explore art around you!</h1>
+
+                    <h3 data-aos="fade-up">
+                        Share with your friends.
+                    </h3>
+
+                    <div class="buttons" data-aos="fade-up">
+                        <a href="#download" class="smoothscroll button stroke">
+                            <span class="icon-circle-down" aria-hidden="true"></span>
+                            Sign Up
+                        </a>
+                    </div>                                         
+
+                </div>
+            </div>
+
+        </div>
+ 
         <ul class="home-social-list">
             <li>
                 <a href="#"><i class="fa fa-facebook-square"></i></a>
@@ -123,7 +137,26 @@
         </div>
 
     </section> <!-- end home -->  
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+            var images = ["images/camera-creative-creativity-flop.jpg","images/abandoned-antique-art.jpg"]
+            var i;
+            var x = document.getElementsByClassName("home-content");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "table-cell";  
+            var section = document.getElementById("home");
 
+            section.style.backgroundImage = "url(\""+images[myIndex-1]+"\"";
+            setTimeout(carousel, 4000); // Change image every 2 seconds
+        }
+        </script>
 
     <!-- about
     ================================================== -->
@@ -144,7 +177,7 @@
 
         <div class="row about-features">
 
-            <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
+            <div class="features-list block-1-2 block-m-1-2 block-mob-full group">
 
                 <div class="bgrid feature" data-aos="fade-up">	
 
@@ -204,33 +237,6 @@
 
                     </div> <!-- /bgrid -->
 
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><i class="icon-sliders"></i></span>	            
-
-                    <div class="service-content">	
-                        <h3>Easy To Customize</h3>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p>                            
-                    </div>	               
-
-                </div> <!-- /bgrid -->
-
-                <div class="bgrid feature" data-aos="fade-up">
-
-                    <span class="icon"><i class="icon-gift"></i></span>	   	           
-
-                    <div class="service-content">
-                        <h3>Free of Charge</h3>
-
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p> 
-                            
-                    </div>	               
-
-                </div> <!-- /bgrid -->
-
             </div> <!-- end features-list -->
 
         </div> <!-- end about-features -->
@@ -242,7 +248,6 @@
 
         <div class="about-how-content" data-aos="fade-up">
             <div class="about-how-steps block-1-2 block-tab-full group">
-
                 <div class="bgrid step" data-item="1">
                     <h3>Sign-Up</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
@@ -250,19 +255,19 @@
                 </div>
 
                 <div class="bgrid step" data-item="2">
-                    <h3>Upload</h3>
+                    <h3>Search for Hotspots</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                     </p> 
                 </div>               
            
                 <div class="bgrid step" data-item="3">
-                    <h3>Create</h3>
+                    <h3>Upload your own</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                     </p> 
                 </div>
 
                 <div class="bgrid step" data-item="4">
-                    <h3>Publish</h3>
+                    <h3>Post and share</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
                     </p> 
                 </div>  
