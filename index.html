@@ -69,15 +69,15 @@
         <div class="home-content "style="background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('./images/camera-creative-creativity-flop.jpg') no-repeat center;  background-size: cover;" >        
             <!-- <div class ="headerSlide" > -->
                 <div class="row contents" >                     
-                    <div class="home-content-left">
+                    <div class="home-content-left" >
 
-                        <h1>Where’d You Find This?</h1>
+                        <h1 data-aos="fade-up">Where’d You Find This?</h1>
 
-                        <h3 >
+                        <h3 data-aos="fade-up">
                             Show the World!
                         </h3>
 
-                        <div class="buttons" >
+                        <div class="buttons" data-aos="fade-up">
                             <a href="#download" class="smoothscroll button stroke">
                                 <span class="icon-circle-down" aria-hidden="true"></span>
                                 Sign Up
@@ -256,12 +256,29 @@
     <!-- Testimonials Section
     ================================================== -->
     <section id="sign-up">
-
         <div class="row">
-            <div class="col-twelve">
-                <h1 class="intro-header" data-aos="fade-up">What They Say About Our App.</h1>
-            </div>   		
-        </div>   	
+                <div class="col-twelve">
+                    <h1 class="intro-header" data-aos="fade-up">Sign up for our Newsletter!</h1>
+                </div>   		
+            </div>   
+
+        <p>Stay up to date with our progress and be the first one to know when we announce a new Release!<p>
+
+        <div class="subscribe-form">
+    
+            <form name="submit-to-google-sheet" id="mc-form" class="group" novalidate="true">
+
+                <input type="email" value="" name="email" class="email" id="mc-email" placeholder="Email Address" required=""> 
+    
+                <input id="submit-form" type="submit" name="subscribe" value="Send">
+    
+                <label for="mc-email" class="subscribe-message"></label>
+    
+            </form>
+
+        </div>	      		
+                            
+	
 
         <div class="row owl-wrap">
 
@@ -271,36 +288,46 @@
 
                     <div>
                         <p>
-                        Your work is going to fill a large part of your life, and the only way to be truly satisfied is
-                        to do what you believe is great work. And the only way to do great work is to love what you do.
-                        If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
-                        </p> 
-
-                        <div class="testimonial-author">
-                                <img src="images/avatars/user-02.jpg" alt="Author image">
-                                <div class="author-info">
-                                    Steve Jobs
-                                    <span class="position">CEO, Apple.</span>
-                                </div>
-                        </div>                 
+                            No more wishing you
+                            knew where that
+                            picture was taken:
+                            search for art by
+                            location, artist,
+                            trending, and more.
+                        </p>              
                     </div> 
 
                     <div>
                         <p>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                        nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.    
-                        </p>
-
-                        <div class="testimonial-author">
-                                <img src="images/avatars/user-03.jpg" alt="Author image">
-                                <div class="author-info">
-                                    John Doe
-                                    <span>CEO, ABC Corp.</span>
-                                </div>
-                        </div>                                         
+                            Whether it’s a classic
+                            landmark or a new
+                            pop-up, share about
+                            your latest find to
+                            help others find it too.  
+                         </p>                                
                     </div> 
 
+                    <div>
+                        <p>
+                            Artists work hard to
+                            put themselves on
+                            the map. We make
+                            sure they can get the
+                            recognition they
+                            deserve.
+                        </p>                                
+                    </div> 
+
+                    <div>
+                        <p>
+                            Work together with
+                            artists and supporters
+                            to build a thriving
+                            public art culture in
+                            your community and
+                            beyond.  
+                        </p>                                
+                    </div> 
                 </div> <!-- end slides -->
 
             </div> <!-- end testimonial-slider -->         
@@ -386,29 +413,7 @@
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>	      		
                             
-                </div> <!-- end footer-site-links --> 
-
-                <div class="col-four md-1-2 tab-full footer-subscribe">
-
-                    <h4>Our Newsletter</h4>
-
-                    <p>Stay up to date with our progress and be the first one to know when we announce a new Release!</p>
-
-                    <div class="subscribe-form">
-                
-                        <form id="mc-form" class="group" novalidate="true">
-
-                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required=""> 
-                
-                            <input type="submit" name="subscribe" value="Send">
-                
-                            <label for="mc-email" class="subscribe-message"></label>
-                
-                        </form>
-
-                    </div>	      		
-                            
-                </div> <!-- end footer-subscribe -->         
+                </div> <!-- end footer-site-links -->       
 
             </div> <!-- /row -->
         </div> <!-- end footer-main -->
@@ -442,7 +447,7 @@
     ================================================== -->
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+       <script src="js/main.js"></script>
 
 </body>
 

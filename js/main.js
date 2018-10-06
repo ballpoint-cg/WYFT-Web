@@ -1,7 +1,3 @@
-/* ===================================================================
- * Dazzle - Main JS
- *
- * ------------------------------------------------------------------- */ 
 
 (function($) {
 
@@ -80,14 +76,29 @@
 	* ------------------------------------------------------ */
 	var ssOwlCarousel = function() {
 
-		$(".owl-carousel").owlCarousel({	
+		$("#sign-up .owl-carousel").owlCarousel({	
 	      loop: true,
-			  nav: false,
-			  dots: false,
 			  items: 1,
-			  autoplay:true
+			  autoplay:true,
+			  autoplaySpeed:4000,
 
 		});
+		$("#download").owlCarousel({	
+			loop: true,
+				nav: false,
+				dots: false,
+				items: 1,
+				autoplay:true,
+				autoplaySpeed:3000,
+		  });
+		  $("#home .owl-carousel").owlCarousel({	
+			loop: true,
+				nav: false,
+				dots: false,
+				items: 1,
+				autoplay:true,
+				autoplaySpeed:1000,
+		  });
 
 	};  	
 
@@ -185,10 +196,10 @@
 	* ------------------------------------------------------ */
 	var ssAjaxChimp = function() {
 
-		$('#mc-form').ajaxChimp({
-			language: 'es',
-		   url: cfg.mailChimpURL
-		});
+		// $('#mc-form').ajaxChimp({
+		// 	language: 'es',
+		//    url: cfg.mailChimpURL
+		// });
 
 		// Mailchimp translation
 		//
@@ -251,9 +262,14 @@
 		ssAOS();
 		ssBackToTop();
 
-		// to use the mailchimp form, uncomment the 
-		// function call ssAjaxChimp() below:
-		// ssAjaxChimp(); 
+		const form = document.forms['submit-to-google-sheet']
+		var url = 'https://script.google.com/macros/s/AKfycbx9Oy3hg9vvuFg1UkDgED3yWLX7awRPaKp-jwkCQ8pek2ilZvWQ/exec'
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			fetch(url, { method: 'POST', body: new FormData(form)})
+			  .then(response => window.alert("Thanks, you'll be the first to know when we release!"))
+			  .catch(error => console.error('Error!', error.message))
+		  })
 
 	})();
  
