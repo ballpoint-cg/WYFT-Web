@@ -79,8 +79,6 @@
 		$("#sign-up .owl-carousel").owlCarousel({	
 	      loop: true,
 			  items: 1,
-			  autoplay:true,
-			  autoplaySpeed:4000,
 
 		});
 		$("#download").owlCarousel({	
