@@ -271,7 +271,33 @@
 			  .catch(error => console.error('Error!', error.message))
 		  })
 
+
+
+
 	})();
  
 
 })(jQuery);
+
+$( document ).ready(function() {
+	function screenClass() {
+		if($(window).innerWidth() < 600) {
+			console.log("run");
+			$('.swapMe').each(function(i, el) {
+				$(el).insertBefore($(el).prev());
+			});
+		}else{
+			$('.swapMe').each(function(i, el) {
+				$(el).insertAfter($(el).next());
+			});
+		} 
+	}
+	
+	// Fire.
+	screenClass();
+	
+	// And recheck when window gets resized.
+	$(window).bind('resize',function(){
+		screenClass();
+	});
+});
