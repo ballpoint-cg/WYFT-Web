@@ -2229,14 +2229,16 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   font-size: 3.6rem;
   line-height: 1;
   position: relative;
-  top: .3rem;
+  top: 1.3rem;
 }
 
 #testimonial-slider p::before {
+  /* line-height: 1; */
   content: '\201C';
 }
 
 #testimonial-slider p::after {
+  line-height: 0;
   content: '\201D';
 }
 
