@@ -6,6 +6,30 @@
 <!--<![endif]-->
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123908964-2"></script>
+	<!-- Detect region from IP address and track if not from Europe -->
+	<script
+	 	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 	crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
+			// console.log(JSON.stringify(data, null, 2));
+			$.getJSON('https://gpdr.geoiplookup.io/'+data.ip, function(d2){
+				// console.log(d2);
+				if(d2.gdpr !== "true"){
+					// console.log("tracking gtag");
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+
+					gtag('config', 'UA-123908964-2');
+				}
+			});
+		});
+
+	</script>
 
     <!--- basic page needs
    ================================================== -->
