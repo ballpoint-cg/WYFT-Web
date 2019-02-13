@@ -6,6 +6,30 @@
 <!--<![endif]-->
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123908964-2"></script>
+	<!-- Detect region from IP address and track if not from Europe -->
+	<script
+	 	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 	crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$.getJSON('https://json.geoiplookup.io/api?callback=?', function(data) {
+			// console.log(JSON.stringify(data, null, 2));
+			$.getJSON('https://gpdr.geoiplookup.io/'+data.ip, function(d2){
+				// console.log(d2);
+				if(d2.gdpr !== "true"){
+					// console.log("tracking gtag");
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+
+					gtag('config', 'UA-123908964-2');
+				}
+			});
+		});
+
+	</script>
 
     <!--- basic page needs
    ================================================== -->
@@ -36,9 +60,9 @@
 
 <body id="top">
 
-    <!-- header 
+    <!-- header
    ================================================== -->
-   <header id="header" >   
+   <header id="header" >
 
    		<div class="header-logo">
 	        <a href="index.html">WYFT</a>
@@ -56,8 +80,8 @@
             <a href="#sign-up" title="sign-up" class="button button-primary cta smoothscroll">Sign Up</a>
 		</nav>
 
-		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
-   	
+		<a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
    </header> <!-- /header -->
 
 
@@ -66,9 +90,9 @@
    <section id="home" >
         <div class = "owl-carousel">
         <!-- <div class="overlay"></div> -->
-            <div class="home-content "style="background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('./images/camera-creative-creativity-flop-min-min.jpg') no-repeat center;  background-size: cover;" >        
+            <div class="home-content "style="background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('./images/camera-creative-creativity-flop-min-min.jpg') no-repeat center;  background-size: cover;" >
 
-                <div class="row contents" >                     
+                <div class="row contents" >
                     <div class="home-content-left" >
                         <h1 data-aos="fade-up">Where’d You Find This?</h1>
                         <h3 data-aos="fade-up">
@@ -80,32 +104,32 @@
                                 <span class="icon-circle-down" aria-hidden="true"></span>
                                 Sign Up
                             </a>
-                        </div>   
+                        </div>
 
                     </div>
                 </div>
-            </div>  
-            <div class="home-content "style="background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('./images/adult-art-city-flop-min-min.jpg') no-repeat center;  background-size: cover;" >        
+            </div>
+            <div class="home-content "style="background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url('./images/adult-art-city-flop-min-min.jpg') no-repeat center;  background-size: cover;" >
                 <div class ="headerSlide" >
-                    <div class="row contents" >                     
+                    <div class="row contents" >
                         <div class="home-content-left">
-        
+
                             <h1>Explore art around you!</h1>
                             <h3 >
                                 Share with your friends.
                             </h3>
-        
+
                             <div class="buttons" >
                                 <a href="#sign-up" class="smoothscroll button stroke">
                                     <span class="icon-circle-down" aria-hidden="true"></span>
                                     Sign Up
                                 </a>
-                            </div>  
+                            </div>
 
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
         <ul class="home-social-list">
                 <li>
@@ -128,7 +152,7 @@
             </a>
         </div>
 
-    </section> <!-- end home -->  
+    </section> <!-- end home -->
 
     <!-- about
     ================================================== -->
@@ -143,14 +167,14 @@
                 <p class="lead" data-aos="fade-up">
                     WYFT lets you explore and discover the public art around you. Find hidden gems that won’t show up on the maps and share them with friends!
                 </p>
-            </div>                       
-            
+            </div>
+
         </div>
         <div class="row" data-aos="fade-up">
             <div class="col-eight mob-full text-row">
                 <h2>Sign up</h2>
                 <p class = "text">
-                    Ready for limitless possibilities to explore trending art locations anywhere you go? 
+                    Ready for limitless possibilities to explore trending art locations anywhere you go?
                     Sign up to find these hidden gems and connect with an art community that wants to share those locations.
                 </p>
             </div>
@@ -174,7 +198,7 @@
                 <h2>Upload your own</h2>
                 <p class = "text">
                     Upload your photo to a hotspot! Whether you use our in-app camera or upload from your camer roll,
-                    add the location so others know exactly where you found it. 
+                    add the location so others know exactly where you found it.
                     This way, you can also keep track of all the hotspots you've been to.
                 </p>
             </div>
@@ -198,105 +222,105 @@
 
             <div class="features-list block-1-2 block-m-1-2 block-mob-full group">
 
-                <div class="bgrid feature" data-aos="fade-up">	
+                <div class="bgrid feature" data-aos="fade-up">
 
-                    <span class="icon"><i class="icon-window"></i></span>            
+                    <span class="icon"><i class="icon-window"></i></span>
 
-                    <div class="service-content">	
+                    <div class="service-content">
 
                         <h3>Fully Resposive</h3>
 
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
                         </p>
-                        
-                    </div> 	         	 
 
-                    </div> 
+                    </div>
 
-                    <div class="bgrid feature" data-aos="fade-up">	
+                    </div>
 
-                        <span class="icon"><i class="icon-image"></i></span>                          
+                    <div class="bgrid feature" data-aos="fade-up">
 
-                    <div class="service-content">	
-                        <h3>Retina Ready</h3>  
+                        <span class="icon"><i class="icon-image"></i></span>
+
+                    <div class="service-content">
+                        <h3>Retina Ready</h3>
 
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
                         </p>
 
-                        
-                    </div>	                          
 
-                </div> 
+                    </div>
+
+                </div>
 
                 <div class="bgrid feature" data-aos="fade-up">
 
-                    <span class="icon"><i class="icon-paint-brush"></i></span>		            
+                    <span class="icon"><i class="icon-paint-brush"></i></span>
 
                     <div class="service-content">
                         <h3>Stylish Design</h3>
 
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p> 
-                            
-                    </div> 	            	               
+                        </p>
 
-                </div> 
+                    </div>
+
+                </div>
 
                     <div class="bgrid feature" data-aos="fade-up">
 
-                        <span class="icon"><i class="icon-file"></i></span>	              
+                        <span class="icon"><i class="icon-file"></i></span>
 
                     <div class="service-content">
                         <h3>Clean Code</h3>
 
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                        </p> 
-                        
-                    </div>                
+                        </p>
 
-                    </div> 
+                    </div>
+
+                    </div>
 
             </div>  -->
             <!-- end features-list -->
 
         <!-- </div> end about-features -->
 
-    </section> <!-- end about -->  
+    </section> <!-- end about -->
     <section id="about-how" class="about">
-          
-        <h1 class="intro-header" data-aos="fade-up">About Our App</h1>           
+
+        <h1 class="intro-header" data-aos="fade-up">About Our App</h1>
 
         <div class="about-how-content" data-aos="fade-up">
             <div class="about-how-steps block-1-2 block-tab-full group">
                 <div class="bgrid step" data-item="1">
                     <h3>Organized</h3>
                     <p>
-                        No more wishing you knew where that picture was taken: search for art by location, artist, trending, and more. 
-                    </p> 
+                        No more wishing you knew where that picture was taken: search for art by location, artist, trending, and more.
+                    </p>
                 </div>
 
                 <div class="bgrid step" data-item="2">
                     <h3>Dynamic</h3>
                     <p>
                         Whether it's a classic landmark or a new pop-up, share about your latest find to help others find it too.
-                    </p> 
-                </div>               
-           
+                    </p>
+                </div>
+
                 <div class="bgrid step" data-item="3">
                     <h3>Productive</h3>
                     <p>
                         Artists work hard to put themselves on the map. We make sure they get the recognition they deserve.
-                    </p> 
+                    </p>
                 </div>
 
                 <div class="bgrid step" data-item="4">
                     <h3>Communal</h3>
                     <p>
                         Work together with artists and supporters to build a thriving public art culture in your community and beyond.
-                    </p> 
-                </div>  
+                    </p>
+                </div>
 
-            </div>           
+            </div>
        </div> <!--end about-how-content -->
 
     </section> <!-- end about-how -->
@@ -307,13 +331,13 @@
         <div class="row">
                 <div class="col-twelve">
                     <h1 class="intro-header" data-aos="fade-up">Sign up for our Newsletter!</h1>
-                </div>   		
-            </div>   
+                </div>
+            </div>
 
         <p>Stay up to date with our progress and be the first one to know when we announce a new Release!<p>
 
         <div class="subscribe-form">
-    
+
             <form name="submit-to-google-sheet" id="mc-form" class="group" novalidate="true">
                 
                 <div class="form-group">
@@ -321,6 +345,7 @@
                     <input type="email" class="form-control" name="EMAIL" id="EMAIL">
                 </div>
 
+<<<<<<< HEAD
                 <div class="form-group">
                     <label >What phone do you use? </label>
                     <ul class="form-ul">
@@ -357,15 +382,19 @@
                     </ul>
                 </div>
     
+=======
+                <input type="email" value="" name="email" class="email" id="mc-email" placeholder="Email Address" required="">
+
+>>>>>>> b00229d2c9de25e2fa11c8ba3a8fa741994c7439
                 <input id="submit-form" type="submit" name="subscribe" value="Send">
-    
+
                 <label for="mc-email" class="subscribe-message"></label>
-    
+
             </form>
 
-        </div>	      		
-                            
-	
+        </div>
+
+
 
         <div class="row owl-wrap">
 
@@ -381,8 +410,8 @@
                             search for art by
                             location, artist,
                             trending, and more.
-                        </p>              
-                    </div> 
+                        </p>
+                    </div>
 
                     <div>
                         <p>
@@ -390,9 +419,9 @@
                             landmark or a new
                             pop-up, share about
                             your latest find to
-                            help others find it too.  
-                         </p>                                
-                    </div> 
+                            help others find it too.
+                         </p>
+                    </div>
 
                     <div>
                         <p>
@@ -402,8 +431,8 @@
                             sure they can get the
                             recognition they
                             deserve.
-                        </p>                                
-                    </div> 
+                        </p>
+                    </div>
 
                     <div>
                         <p>
@@ -412,36 +441,36 @@
                             to build a thriving
                             public art culture in
                             your community and
-                            beyond.  
-                        </p>                                
-                    </div> 
+                            beyond.
+                        </p>
+                    </div>
                 </div> <!-- end slides -->
 
-            </div> <!-- end testimonial-slider -->         
-            
+            </div> <!-- end testimonial-slider -->
+
         </div> <!-- end flex-container -->
 
     </section> <!-- end testimonials -->
-    
+
 
     <!-- download
-    ================================================== -->  
+    ================================================== -->
     <section id="download" class="owl-carousel">
 
         <div  class="downloadImg" style="background:url('./images/adult-art-bicycle-min-min.jpg') no-repeat center;  background-size: cover;">
-        </div> 
+        </div>
 
-        <div class="downloadImg" style="background:url('./images/art-beautiful-color-min.jpg') no-repeat center;  background-size: cover;">                         
-        </div> 
+        <div class="downloadImg" style="background:url('./images/art-beautiful-color-min.jpg') no-repeat center;  background-size: cover;">
+        </div>
 
-        <!-- <div class="downloadImg" style="background:url('./images/apartment-architecture-bookcase-min-min.jpg') no-repeat center;  background-size: cover;">                         
+        <!-- <div class="downloadImg" style="background:url('./images/apartment-architecture-bookcase-min-min.jpg') no-repeat center;  background-size: cover;">
         </div>  -->
 
         <!-- <div class="downloadImg" style="background:url('./images/art-artistic-colors-2-min-min.jpg') no-repeat center;  background-size: cover;">                          -->
         <!-- </div>  -->
 
 
-    </section> <!-- end download -->    
+    </section> <!-- end download -->
 
 
     <!-- footer
@@ -449,9 +478,9 @@
     <footer>
 
         <div class="footer-main">
-            <div class="row">  
+            <div class="row">
 
-                <div class="col-three md-1-3 tab-full footer-info">            
+                <div class="col-three md-1-3 tab-full footer-info">
 
                     <div class="footer-logo"></div>
 
@@ -466,8 +495,8 @@
                             <a href="#"><i class="fa fa-instagram"></i></a>
                         </li>
                     </ul>
-                    
-                    
+
+
                 </div> <!-- end footer-info -->
 
                 <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
@@ -483,9 +512,9 @@
                     <p>
                     info@wyft.app <br>
                     <!-- Phone: (111) 1111 1111 <br>     -->
-                    </p>                    
+                    </p>
 
-                </div> <!-- end footer-contact -->  
+                </div> <!-- end footer-contact -->
 
                 <div class="col-two md-1-3 tab-1-2 mob-full footer-site-links">
 
@@ -495,13 +524,14 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#about">How it Works</a></li>
                         <li><a href="#about-how">About</a></li>
+                        <li><a href="https://docs.google.com/document/d/1b8aaJ8ozRhGh26SfBuj7VYCCabTB4iKpKPAwdR1ACJA/edit?usp=sharing" target="_blank">Privacy Policy</a></li>
                         <!-- <li><a href="#">Blog</a></li> -->
                         <!-- <li><a href="#">FAQ</a></li> -->
                         <!-- <li><a href="#">Terms</a></li> -->
                         <!-- <li><a href="#">Privacy Policy</a></li> -->
-                    </ul>	      		
-                            
-                </div> <!-- end footer-site-links -->       
+                    </ul>
+
+                </div> <!-- end footer-site-links -->
 
             </div> <!-- /row -->
         </div> <!-- end footer-main -->
@@ -513,23 +543,23 @@
 
       		<div class="col-twelve">
 	      		<div class="copyright">
-		         	<span>Design by <a href="https://www.ballpointcg.com/">Ballpoint Consulting</a></span>		         	
+		         	<span>Design by <a href="https://www.ballpointcg.com/">Ballpoint CG</a></span>
 		         </div>
 
 		         <div id="go-top">
 		            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up"></i></a>
-		         </div>         
+		         </div>
 	      	</div>
 
-      	</div> <!-- end footer-bottom -->     	
+      	</div> <!-- end footer-bottom -->
 
       </div>
 
     </footer>
 
-    <div id="preloader"> 
+    <div id="preloader">
     	<div id="loader"></div>
-    </div>  
+    </div>
 
     <!-- Java Script
     ================================================== -->
