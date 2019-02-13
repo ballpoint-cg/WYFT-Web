@@ -315,8 +315,47 @@
         <div class="subscribe-form">
     
             <form name="submit-to-google-sheet" id="mc-form" class="group" novalidate="true">
+                
+                <div class="form-group">
+                    <label >Email Address : </label>
+                    <input type="email" class="form-control" name="EMAIL" id="EMAIL">
+                </div>
 
-                <input type="email" value="" name="email" class="email" id="mc-email" placeholder="Email Address" required=""> 
+                <div class="form-group">
+                    <label >What phone do you use? </label>
+                    <ul class="form-ul">
+                        <li><input type="radio" value="iPhone"  name="PTYPE" id="PTYPE-0"><label class="ul-label"  for="PTYPE-0">iPhone </label></li>
+                        <li><input type="radio" value="Android" name="PTYPE" id="PTYPE-1"><label class="ul-label"  for="PTYPE-1">Android</label></li>
+                        <li><input type="radio" value="Other"   name="PTYPE" id="PTYPE-2"><label class="ul-label"  for="PTYPE-2">Other  </label></li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <label> How old are you? </label>
+                    <ul class="form-ul">
+                        <li><input type="radio" value="18-26"   name="AGE" id="AGE-0"><label class="ul-label"  for="AGE-0">18-26</label></li>
+                        <li><input type="radio" value="27-35"   name="AGE" id="AGE-1"><label class="ul-label"  for="AGE-1">27-35</label></li>
+                        <li><input type="radio" value="36-44"   name="AGE" id="AGE-2"><label class="ul-label"  for="AGE-2">36-44</label></li>
+                        <li><input type="radio" value="45-53"   name="AGE" id="AGE-3"><label class="ul-label"  for="AGE-3">45-53</label></li>
+                        <li><input type="radio" value="54+"     name="AGE" id="AGE-4"><label class="ul-label"  for="AGE-4">54+  </label></li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <label> What is your Gender? </label>
+                    <ul class="form-ul">
+                        <li><input type="radio" value="male"           name="GENDER" id="GENDER-0"><label class="ul-label"  for="GENDER-0">Male             </label></li>
+                        <li><input type="radio" value="female"         name="GENDER" id="GENDER-1"><label class="ul-label"  for="GENDER-1">Female           </label></li>
+                        <li><input type="radio" value="nonbinary"      name="GENDER" id="GENDER-2"><label class="ul-label"  for="GENDER-2">Non-Binary       </label></li>
+                        <li><input type="radio" value="pref not to say"name="GENDER" id="GENDER-3"><label class="ul-label"  for="GENDER-3">Prefer not to Say</label></li>
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <label> How would you describe yourself? </label>
+                    <ul class="form-ul">
+                        <li><input type="checkbox" value="Artist"        name="DESC" id="DESC-0"><label class="ul-label"  for="DESC-0">Artist        </label></li>
+                        <li><input type="checkbox" value="Art Enthusiast"name="DESC" id="DESC-1"><label class="ul-label"  for="DESC-1">Art Enthusiast</label></li>
+                        <li><input type="checkbox" value="Small Business"name="DESC" id="DESC-2"><label class="ul-label"  for="DESC-2">Small Business</label></li>
+                    </ul>
+                </div>
     
                 <input id="submit-form" type="submit" name="subscribe" value="Send">
     
