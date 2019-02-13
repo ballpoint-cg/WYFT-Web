@@ -656,8 +656,8 @@ select:focus {
 
 label,
 legend {
-  font-family: "montserrat-bold", sans-serif;
-  font-size: 1.4rem;
+  font-family: "montserrat", sans-serif;
+  /* font-size: 1.4rem; */
   margin-bottom: .6rem;
   color: #151515;
   display: block;
@@ -2138,7 +2138,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 #sign-up .owl-wrap {
   width: 80%;
-  max-width: 900px;
+  max-width: 800px;
   margin: 4.2rem auto 0;
 }
 
@@ -2146,7 +2146,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   margin: 0;
   padding: 0;
   position: relative;
-  max-width: 500px;
+  max-width: 900px;
   margin: 0 auto;
   width: 75%;
 }
@@ -2184,12 +2184,15 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 #sign-up .form-group {
   margin-bottom: 20px;
   text-align: left;
+  font-size: 2rem;
+  font-weight:bold;
 }
 #sign-up .form-ul{
   list-style-type: none;
   margin-block-start: 0;
   margin-block-end:  0;
   padding-inline-start: 10px;
+  
 }
 #sign-up .form-ul li{
   display: inline-block;
@@ -2198,9 +2201,10 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .ul-label{
   margin-left: 10px;
   display: inline-block;
-  font-weight: 700;
+  font-weight: lighter;
   margin-bottom: 5px;
   max-width: 100%;
+  font-size: 1.8rem !important;
 }
 /* #sign-up #mc-form label {
   color: #ffffff;
