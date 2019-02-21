@@ -369,7 +369,6 @@ fieldset {
   margin-bottom: 1.5rem;
 }
 
-input,
 textarea,
 select,
 pre,
@@ -583,7 +582,7 @@ select {
   line-height: 3rem;
   max-width: 100%;
   background: rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.3s ease-in-out;
+  /* -webkit-transition: all 0.3s ease-in-out; */
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
 }
@@ -657,8 +656,8 @@ select:focus {
 
 label,
 legend {
-  font-family: "montserrat-bold", sans-serif;
-  font-size: 1.4rem;
+  font-family: "montserrat", sans-serif;
+  /* font-size: 1.4rem; */
   margin-bottom: .6rem;
   color: #151515;
   display: block;
@@ -2113,6 +2112,16 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   min-height: 600px;
 }
 
+#submit-form{
+  background-color: #D54AB7;
+  border-color: #D54AB7;
+  color: #FFFFFF;
+}
+
+#submit-form:hover{
+  background-color: #0832A0;
+  border-color: #0832A0;
+}
 #sign-up h1::before {
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -2129,7 +2138,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 #sign-up .owl-wrap {
   width: 80%;
-  max-width: 900px;
+  max-width: 800px;
   margin: 4.2rem auto 0;
 }
 
@@ -2137,7 +2146,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   margin: 0;
   padding: 0;
   position: relative;
-  max-width: 500px;
+  max-width: 900px;
   margin: 0 auto;
   width: 75%;
 }
@@ -2150,14 +2159,14 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 #sign-up #mc-form input[type="email"] {
   width: 100%;
   height: 5.4rem;
-  padding: 1.2rem 100px 1.2rem 60px;
-  background: url(../images/email-icon.png) 20px center no-repeat, rgba(0, 0, 0, 0.4);
-  background-size: 24px 16px, auto;
+  /* padding: 1.2rem 100px 1.2rem 60px; */
+  /* background: url(../images/email-icon.png) 20px center no-repeat, rgba(0, 0, 0, 0.4); */
+  /* background-size: 24px 16px, auto; */
   margin-bottom: 1.8rem;
-  color: rgba(255, 255, 255, 0.5);
+  /* color: rgba(255, 255, 255, 0.5); */
 }
 
-#sign-up #mc-form input[type="email"]:focus {
+/* #sign-up #mc-form input[type="email"]:focus {
   color: #ffffff;
 }
 
@@ -2170,16 +2179,41 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   border-color: #0832A0;
   border-radius: 0 .5rem .5rem 0;
   padding: 0 15px;
-}
+} */
 
-#sign-up #mc-form label {
+#sign-up .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 2rem;
+  font-weight:bold;
+}
+#sign-up .form-ul{
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end:  0;
+  padding-inline-start: 10px;
+  
+}
+#sign-up .form-ul li{
+  display: inline-block;
+  margin-right: 30px;
+}
+.ul-label{
+  margin-left: 10px;
+  display: inline-block;
+  font-weight: lighter;
+  margin-bottom: 5px;
+  max-width: 100%;
+  font-size: 1.8rem !important;
+}
+/* #sign-up #mc-form label {
   color: #ffffff;
   font-family: "montserrat-regular", sans-serif;
   font-size: 1.3rem;
   padding: 0 2rem;
-}
+} */
 
-#sign-up #mc-form label i {
+/* #sign-up #mc-form label i {
   padding-right: 6px;
 }
 
@@ -2190,20 +2224,20 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 #sign-up #mc-form :-moz-placeholder {
   color: rgba(255, 255, 255, 0.2);
   /* Firefox 18- */
-}
+/* } */
 
-#sign-up #mc-form ::-moz-placeholder {
+/* #sign-up #mc-form ::-moz-placeholder {
   color: rgba(255, 255, 255, 0.2);
-  /* Firefox 19+ */
-}
+  Firefox 19+
+} */
 
-#sign-up #mc-form :-ms-input-placeholder {
+/* #sign-up #mc-form :-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.2);
 }
 
 #sign-up #mc-form .placeholder {
   color: rgba(255, 255, 255, 0.2) !important;
-}
+} */ 
 
 
 #testimonial-slider {

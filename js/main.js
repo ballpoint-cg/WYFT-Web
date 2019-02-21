@@ -267,8 +267,14 @@
 		form.addEventListener('submit', e => {
 			e.preventDefault()
 			fetch(url, { method: 'POST', body: new FormData(form)})
-			  .then(response => window.alert("Thanks, you'll be the first to know when we release!"))
-			  .catch(error => console.error('Error!', error.message))
+			  .then(response => {
+					window.alert("Thanks, you'll be the first to know when we release!");
+					$('input[type=radio],input[type=checkbox]').attr('checked',false);
+					// $('input[type=checkbox').attr('checked',false);
+					$('input[type=email]').val('');
+				})
+				.catch(error => console.error('Error!', error.message));
+
 		  })
 
 
