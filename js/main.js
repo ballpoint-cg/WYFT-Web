@@ -262,13 +262,30 @@
 		ssAOS();
 		ssBackToTop();
 
+        $("#thanks").dialog({
+          autoOpen: false,
+          resizable:false,
+          draggable:true,
+          modal: true,
+          showTitle:false,
+          buttons: {
+            Ok: function() {
+                $( this ).dialog( "close" );
+            }
+          }
+        });
+        $(".ui-dialog-titlebar").hide();
 		const form = document.forms['submit-to-google-sheet']
 		var url = 'https://script.google.com/macros/s/AKfycbx9Oy3hg9vvuFg1UkDgED3yWLX7awRPaKp-jwkCQ8pek2ilZvWQ/exec'
 		form.addEventListener('submit', e => {
 			e.preventDefault()
 			fetch(url, { method: 'POST', body: new FormData(form)})
-			  .then(response => {
-					window.alert("Thanks, you'll be the first to know when we release!");
+                .then(response => {
+                    $("#thanks").dialog("open");
+//                    var insta_link = "@wyft_app";
+//					window.alert("Thank you again for your interest in WYFT. As soon as the app is ready for launch, you will be notified by email. In the meantime, you can follow us on Instagram " + insta_link.link("https://www.instagram.com/wyft_app/") + "!");
+                    
+//                    $("#thanks").dialog();
 					$('input[type=radio],input[type=checkbox]').attr('checked',false);
 					// $('input[type=checkbox').attr('checked',false);
 					$('input[type=email]').val('');
