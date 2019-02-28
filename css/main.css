@@ -2041,7 +2041,9 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   padding-bottom: 3.6rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
-
+.no-padding{
+  padding-bottom:0;
+}
 .about-features .features-list {
   padding-top: 5.4rem;
 }
@@ -2080,10 +2082,6 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 .bio{
   margin-top:4rem;
-  width:66%;
-}
-.left{
-  text-align: left !important;
 }
 .headshot{
   max-height: 200px;
@@ -2092,13 +2090,24 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+}
+.headshot-phone{
+  max-height: 150px;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+.round-corner{
+  border-radius: 3%;
 }
 .headshot-div{
-  /* height: 100%; */
   position: relative;
 }
 .row{
-  min-height: 200px;
+  min-height: 150px;
+}
+.team-row{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
 }
 /* ------------------------------------------------------------------- 
  * responsive:
@@ -2180,6 +2189,9 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 @media only screen and (max-width: 650px) {
+  #about{
+    padding-top: 6rem;
+  }
   .about-features {
     max-width: 600px;
     text-align: center;
