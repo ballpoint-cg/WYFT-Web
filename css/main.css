@@ -1497,7 +1497,7 @@ h1.intro-header::before {
   /* display: table-cell;   */
 }
 .top-content .contents{
-  padding-top: 13rem; 
+  padding-top: 15rem; 
   height: 300px;
 }
 .home-content-left {
@@ -1505,10 +1505,11 @@ h1.intro-header::before {
   position: relative;
   width: 50%;
 }
-.top-content{
-  padding: 4rem 0 12rem 40px;
+.top-content-left{
+  padding: 4rem 0 4rem 40px;
   position: relative;
   width: 100%;
+  vertical-align: bottom;
 }
 .home-content-left h3 {
   color: rgba(255, 255, 255, 0.95);
@@ -1528,13 +1529,13 @@ h1.intro-header::before {
   color: #ffffff;
   /* margin-bottom: 9rem; */
 }
-.top-content h1 {
+.top-content-left h1 {
   font-family: "montserrat-regular", sans-serif;
   font-size: 5.2rem;
   letter-spacing: -.05rem;
   line-height: 1.269;
   color: #ffffff;
-  /* margin-top: 45%; */
+  margin-bottom: 0;
 }
 .home-content-left .button.stroke {
   color: #ffffff !important;
@@ -1748,13 +1749,22 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   .home-content {
     vertical-align: middle;
   }
+  .top-content{
+    vertical-align: middle;
+  }
   .home-content-left {
     padding: 18rem 0 12rem 40px;
+  }
+  .top-content-left {
+    padding: 6rem 0 4rem 40px;
   }
   .home-content-left h3 {
     font-size: 1.5rem;
   }
   .home-content-left h1 {
+    font-size: 4.8rem;
+  }
+  .top-content-left h1{
     font-size: 4.8rem;
   }
   .home-image-right {
@@ -1770,6 +1780,12 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   .home-content-left h1 {
     font-size: 4.6rem;
   }
+  .top-content-left h1 {
+    font-size: 4.6rem;
+  }
+  .top-content-left{
+    padding: 6rem 6rem 4rem 4rem;
+  }
   .home-content-left h1 br {
     display: none;
   }
@@ -1780,10 +1796,17 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     width: 60%;
     padding: 18rem 6rem 12rem 4rem;
   }
+  .top-content-left {
+    width: 60%;
+    padding: 7rem 6rem 4rem 4rem;
+  }
   .home-content-left h3 {
     font-size: 1.5rem;
   }
   .home-content-left h1 {
+    font-size: 4.2rem;
+  }
+  .top-content-left h1 {
     font-size: 4.2rem;
   }
   .home-image-right {
@@ -1827,16 +1850,36 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     padding: 0;
     margin-bottom: -378px;
   }
+  #top,
+  .top-content {
+    display: block;
+    text-align: center;
+  }
+  .top-content-left {
+    width: 94%;
+    position: static;
+    padding: 6rem 6rem 366px;
+    margin: 0 auto;
+  }
+  .top-content-left h1 {
+    margin-bottom: 3.6rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   #home {
     min-height: auto;
   }
+  #top {
+    min-height: auto;
+  }
   .home-content-left h3 {
     font-size: 1.4rem;
   }
   .home-content-left h1 {
+    font-size: 3.6rem;
+  }
+  .top-content-left h1 {
     font-size: 3.6rem;
   }
 }
@@ -2035,8 +2078,28 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   text-align: center;
   margin-top: 10%;
 }
-
-
+.bio{
+  margin-top:4rem;
+  width:66%;
+}
+.left{
+  text-align: left !important;
+}
+.headshot{
+  max-height: 200px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.headshot-div{
+  /* height: 100%; */
+  position: relative;
+}
+.row{
+  min-height: 200px;
+}
 /* ------------------------------------------------------------------- 
  * responsive:
  * about 
