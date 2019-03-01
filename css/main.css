@@ -1128,7 +1128,7 @@ h1.intro-header::before {
 
 @media only screen and (max-width: 600px) {
   h1.intro-header {
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
 }
 
@@ -1880,7 +1880,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     font-size: 3.6rem;
   }
   .top-content-left h1 {
-    font-size: 3.6rem;
+    font-size: 4rem;
   }
 }
 
@@ -2042,7 +2042,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 .no-padding{
-  padding-bottom:0;
+  padding-bottom:0 !important;
 }
 .about-features .features-list {
   padding-top: 5.4rem;
@@ -2206,6 +2206,14 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   }
   .about-features .feature h3 {
     margin-bottom: 1.5rem;
+  }
+  .about-page-header{
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about-page-header{
+    font-size: 3rem;
   }
 }
 
@@ -2513,6 +2521,27 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 
+/* ------------------------------------------------------------------- 
+story section
+/ ------------------------------------------------------------------- */
+
+#story{
+  background: #EEEEEE;
+  padding-top: 10rem;
+  overflow: hidden;
+  padding-bottom: 5rem;
+}
+#story .title{
+  font-size: 3.4rem;
+}
+#story .lead{
+  color: black;
+}
+@media only screen and (max-width: 600px) {
+  #story .title{
+    font-size: 3rem;
+  }
+}
 /* ------------------------------------------------------------------- 
  * responsive:
  * testimonials
