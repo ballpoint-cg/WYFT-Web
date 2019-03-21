@@ -304,7 +304,7 @@
 
 $( document ).ready(function() {
 	if( screen.width <= 480 ){
-		$('.demo1').attr('href', 'awalk.html');
+		$('.demo1').attr('href', 'https://www.figma.com/proto/NJHsOK7RWGNj2726bm3t1Uar/WYFT-Demo---GW-ARTS-WALK?node-id=164%3A0&scaling=scale-down');
 		console.log('hi');
 	}
 	function screenClass() {
