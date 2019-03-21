@@ -303,6 +303,10 @@
 })(jQuery);
 
 $( document ).ready(function() {
+	if( screen.width <= 480 ){
+		$('.demo1').attr('href', 'awalk.html');
+		console.log('hi');
+	}
 	function screenClass() {
 		if($(window).innerWidth() < 600) {
 			console.log("run");
