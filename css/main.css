@@ -2859,3 +2859,16 @@ footer ul a:visited {
 
 
 /*# sourceMappingURL=main.css.map */
+.demo{
+  border: none; 
+  width:100%; 
+  height:650px; 
+}
+
+@media (min-width: 768px){
+  .demo{
+    border: none; 
+    width:100%; 
+    height:800px; 
+  }
+}
