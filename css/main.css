@@ -2867,8 +2867,6 @@ footer ul a:visited {
 
 @media (min-width: 768px){
   .demo{
-    border: none; 
-    width:100%; 
     height:800px; 
   }
 }
