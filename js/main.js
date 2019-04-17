@@ -277,21 +277,25 @@
         $(".ui-dialog-titlebar").hide();
 		const form = document.forms['submit-to-google-sheet']
 		var url = 'https://script.google.com/macros/s/AKfycbx9Oy3hg9vvuFg1UkDgED3yWLX7awRPaKp-jwkCQ8pek2ilZvWQ/exec'
+		function validateEmail(email) {
+			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			return re.test(String(email).toLowerCase());
+		}
 		form.addEventListener('submit', e => {
 			e.preventDefault()
-			fetch(url, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    $("#thanks").dialog("open");
-//                    var insta_link = "@wyft_app";
-//					window.alert("Thank you again for your interest in WYFT. As soon as the app is ready for launch, you will be notified by email. In the meantime, you can follow us on Instagram " + insta_link.link("https://www.instagram.com/wyft_app/") + "!");
-                    
-//                    $("#thanks").dialog();
-					$('input[type=radio],input[type=checkbox]').attr('checked',false);
-					// $('input[type=checkbox').attr('checked',false);
-					$('input[type=email]').val('');
-				})
-				.catch(error => console.error('Error!', error.message));
-
+			const email = document.getElementById('EMAIL').value;
+			if (!validateEmail(email)){
+				alert("Please enter an real e-mail!")
+			}else{
+				fetch(url, { method: 'POST', body: new FormData(form)})
+									.then(response => {
+											$("#thanks").dialog("open");
+											$('input[type=radio],input[type=checkbox]').attr('checked',false);
+											// $('input[type=checkbox').attr('checked',false);
+											$('input[type=email]').val('');
+					})
+					.catch(error => console.error('Error!', error.message));
+			}
 		  })
 
 
@@ -305,7 +309,7 @@
 $( document ).ready(function() {
 	if( screen.width <= 480 ){
 		$('.demo1').attr('href', 'https://www.figma.com/proto/NJHsOK7RWGNj2726bm3t1Uar/WYFT-Demo---GW-ARTS-WALK?node-id=44%3A14&scaling=scale-down-width');
-		console.log('hi');
+		// console.log('hi');
 	}
 	function screenClass() {
 		if($(window).innerWidth() < 600) {
