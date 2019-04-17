@@ -285,7 +285,7 @@
 			e.preventDefault()
 			const email = document.getElementById('EMAIL').value;
 			if (!validateEmail(email)){
-				alert("Please enter an real e-mail!")
+				alert("Please enter a real e-mail!")
 			}else{
 				fetch(url, { method: 'POST', body: new FormData(form)})
 									.then(response => {
